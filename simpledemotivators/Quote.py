@@ -7,10 +7,10 @@ import os
 class Quote:
     
     def textsize(text, font):
-    im = Image.new(mode="P", size=(0, 0))
-    draw = ImageDraw.Draw(im)
-    _, _, width, height = draw.textbbox((0, 0), text=text, font=font)
-    return width, height
+        im = Image.new(mode="P", size=(0, 0))
+        draw = ImageDraw.Draw(im)
+        _, _, width, height = draw.textbbox((0, 0), text=text, font=font)
+        return width, height
     
     def __init__(self, quote_text, author_name):
         self._quote_text = quote_text
