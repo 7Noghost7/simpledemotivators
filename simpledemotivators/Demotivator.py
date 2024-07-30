@@ -8,6 +8,13 @@ import os
 
 
 class Demotivator:
+
+    def textsize(text, font):
+    im = Image.new(mode="P", size=(0, 0))
+    draw = ImageDraw.Draw(im)
+    _, _, width, height = draw.textbbox((0, 0), text=text, font=font)
+    return width, height
+    
     def __init__(self, top_text='', bottom_text=''):
         self._top_text = top_text
         self._bottom_text = bottom_text
